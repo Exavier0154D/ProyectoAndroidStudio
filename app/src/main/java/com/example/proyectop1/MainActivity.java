@@ -32,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new FeedReaderDbHelper(this);
     }
 
-    // LISTAR
+
     public void Listar(View vista) {
-        Intent listar = new Intent(this, Listado.class);
-        startActivity(listar);
+        Intent intent = new Intent(MainActivity.this, Listado.class);
+        startActivity(intent);
     }
 
-    // GUARDAR
+
+
     public void Guardar(View vista) {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 
-    // BUSCAR
+
     public void Buscar(View vista) {
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 
-    // ELIMINAR
+    // ✅ ELIMINAR
     public void Eliminar(View vista) {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -120,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 
-    // ACTUALIZAR
+    // ✅ ACTUALIZAR
     public void Actualizar(View vista) {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -146,3 +147,4 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 }
+
